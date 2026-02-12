@@ -17,9 +17,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ({ className, variant = 'primary', size = 'md', children, ...props }, ref) => {
 
         const variants = {
-            primary: "bg-white text-black border border-transparent hover:bg-gray-200",
-            secondary: "bg-white/5 backdrop-blur-md border border-white/10 text-white hover:bg-white/10 hover:border-white/20",
-            outline: "bg-transparent border border-white/20 text-white hover:border-white/50 hover:bg-white/5",
+            primary: "bg-neon text-graphite-950 border border-transparent hover:bg-neon-hover hover:shadow-[0_0_20px_rgba(57,255,20,0.5)]",
+            secondary: "bg-graphite-900/80 backdrop-blur-md border border-white/10 text-white hover:bg-graphite-800 hover:border-neon/50",
+            outline: "bg-transparent border border-neon/50 text-neon hover:border-neon hover:bg-neon/10 hover:shadow-[0_0_15px_rgba(57,255,20,0.3)]",
         };
 
         const sizes = {
@@ -34,7 +34,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={cn(
-                    "relative inline-flex items-center justify-center rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500/50 disabled:pointer-events-none disabled:opacity-50",
+                    "relative inline-flex items-center justify-center rounded-lg font-medium transition-all focus:outline-none focus:ring-2 focus:ring-neon/50 disabled:pointer-events-none disabled:opacity-50",
                     variants[variant],
                     sizes[size],
                     className
@@ -42,9 +42,6 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                 {...props}
             >
                 {children}
-                {variant === 'primary' && (
-                    <div className="absolute inset-0 -z-10 bg-white/20 blur-xl opacity-0 transition-opacity group-hover:opacity-100" />
-                )}
             </motion.button>
         );
     }

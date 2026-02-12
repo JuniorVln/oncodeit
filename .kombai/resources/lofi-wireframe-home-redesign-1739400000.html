@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page Redesign - Wireframe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: #fff;
+            color: #333;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .wireframe-header {
+            background: #f5f5f5;
+            border: 2px solid #333;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        .wireframe-header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .wireframe-header p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .section {
+            border: 3px dashed #999;
+            padding: 30px;
+            margin-bottom: 30px;
+            background: #fafafa;
+            position: relative;
+        }
+
+        .section-label {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #fff;
+            padding: 5px 15px;
+            border: 2px solid #333;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .component-tag {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            z-index: 10;
+            color: white;
+        }
+
+        .tag-reuse {
+            background: #4CAF50;
+        }
+
+        .tag-new {
+            background: #FF9800;
+        }
+
+        .grid {
+            display: grid;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .box {
+            border: 2px solid #333;
+            padding: 20px;
+            background: #fff;
+            position: relative;
+            min-height: 100px;
+        }
+
+        .box-dotted {
+            border-style: dotted;
+        }
+
+        .placeholder-img {
+            background: #e0e0e0;
+            border: 2px dashed #999;
+            padding: 40px;
+            text-align: center;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .button-primary {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #333;
+            color: #fff;
+            border: 3px solid #333;
+            font-weight: bold;
+            margin: 10px 10px 10px 0;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .button-secondary {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #fff;
+            color: #333;
+            border: 3px solid #333;
+            font-weight: bold;
+            margin: 10px 10px 10px 0;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #999;
+            background: #f9f9f9;
+            margin: 8px 0;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-large {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .text-medium {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .text-small {
+            font-size: 14px;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .flex {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .flex-center {
+            justify-content: center;
+        }
+
+        .icon-placeholder {
+            width: 48px;
+            height: 48px;
+            background: #ccc;
+            border: 2px solid #999;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #666;
+            background: #f9f9f9;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .card-mini {
+            border: 2px solid #999;
+            padding: 15px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .testimonial-card {
+            border: 2px solid #999;
+            padding: 20px;
+            background: #fff;
+            position: relative;
+        }
+
+        .quote-mark {
+            font-size: 48px;
+            color: #ccc;
+            line-height: 1;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2, .grid-3, .grid-4 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .improvement-note {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+
+        .improvement-note h4 {
+            color: #856404;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .improvement-note ul {
+            margin-left: 20px;
+            font-size: 13px;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="wireframe-header">
+        <h1>🎨 Redesign da Página Home - On Code IT</h1>
+        <p>Wireframe de baixa fidelidade mostrando melhorias na hierarquia visual, fluxo de conversão e prova social</p>
+    </div>
+
+    <!-- HEADER/NAVIGATION -->
+    <!-- REUSABLE: Header from src/components/layout/Header.tsx -->
+    <div class="section" style="padding: 15px 30px;">
+        <span class="component-tag tag-reuse" title="src/components/layout/Header.tsx">[REUSE] Header</span>
+        <span class="section-label">HEADER</span>
+        <div class="flex" style="justify-content: space-between;">
+            <div style="font-weight: bold; font-size: 18px;">[Logo] On Code_IT</div>
+            <div class="flex">
+                <span style="margin: 0 15px;">Home</span>
+                <span style="margin: 0 15px;">Serviços</span>
+                <span style="margin: 0 15px;">Sobre</span>
+                <span style="margin: 0 15px;">Blog</span>
+                <span style="margin: 0 15px;">Contato</span>
+                <div class="button-secondary" style="padding: 8px 20px; margin: 0;">Iniciar Projeto</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO SECTION - IMPROVED -->
+    <div class="section">
+        <span class="section-label">HERO - Improved Layout</span>
+        <div class="improvement-note">
+            <h4>✨ Melhorias nesta seção:</h4>
+            <ul>
+                <li>Adicionado badge de credibilidade/anos de experiência</li>
+                <li>CTAs mais destacados com hierarquia clara</li>
+                <li>Melhor contraste e espaçamento</li>
+                <li>Trust indicators visíveis (clientes, projetos)</li>
+            </ul>
+        </div>
+        
+        <div style="min-height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <!-- REUSABLE: Hero component (modified) -->
+            <span class="component-tag tag-reuse" title="src/components/sections/Hero.tsx">[REUSE] Hero</span>
+            
+            <!-- Trust Badge -->
+            <div style="border: 2px solid #666; padding: 8px 16px; margin-bottom: 20px; display: inline-block;">
+                <span style="font-size: 12px;">✓ 10+ Anos de Experiência | 500+ Projetos Entregues</span>
+            </div>
+
+            <div class="text-large text-center" style="max-width: 800px;">
+                Sua Tecnologia.<br/>
+                Operacional e Exponencial.
+            </div>
+
+            <p class="text-center" style="max-width: 600px; margin: 20px auto; font-size: 16px;">
+                Unimos a robustez da TI corporativa com a velocidade da Inteligência Artificial.
+            </p>
+
+            <!-- PRIMARY CTA GROUP -->
+            <div style="margin: 30px 0; text-align: center;">
+                <!-- REUSABLE: Button component -->
+                <span style="position: relative; display: inline-block;">
+                    <span class="component-tag tag-reuse" title="src/components/ui/Button.tsx" style="top: -35px; right: -10px;">[REUSE] Button</span>
+                    <div class="button-primary">Começar Agora →</div>
+                </span>
+                <div class="button-secondary">Conhecer Soluções</div>
+            </div>
+
+            <!-- SOCIAL PROOF STATS - NEW -->
+            <div class="grid grid-3" style="max-width: 700px; margin: 40px auto 0;">
+                <span class="component-tag tag-new" title="To be created at src/components/ui/StatBadge.tsx">[NEW] StatBadge</span>
+                <div class="stat-box">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Projetos</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Satisfação</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Suporte</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES SECTION - REORGANIZED -->
+    <div class="section">
+        <span class="section-label">SERVIÇOS - Reorganized for Clarity</span>
+        <div class="improvement-note">
+            <h4>✨ Melhorias nesta seção:</h4>
+            <ul>
+                <li>Tabs interativos para melhor organização</li>
+                <li>Descrições mais detalhadas de cada serviço</li>
+                <li>CTAs específicos por categoria</li>
+                <li>Melhor hierarquia visual dos cards</li>
+            </ul>
+        </div>
+
+        <div class="text-large text-center">Soluções Híbridas</div>
+        <p class="text-center text-small">Estabilidade legado + Inovação acelerada.</p>
+
+        <!-- TAB NAVIGATION - NEW -->
+        <div style="margin: 30px auto; text-align: center;">
+            <span class="component-tag tag-new" title="To be created at src/components/ui/Tabs.tsx">[NEW] Tabs</span>
+            <div style="display: inline-flex; border: 2px solid #333; background: #f5f5f5;">
+                <div style="padding: 12px 30px; background: #333; color: #fff; font-weight: bold;">Core IT</div>
+                <div style="padding: 12px 30px; border-left: 2px solid #333;">AI Solutions</div>
+            </div>
+        </div>
+
+        <!-- SERVICES GRID - CORE IT -->
+        <div class="grid grid-4" style="margin-top: 30px;">
+            <!-- REUSABLE: Card component -->
+            <span class="component-tag tag-reuse" title="src/components/ui/Card.tsx">[REUSE] Card</span>
+            
+            <div class="card-mini">
+                <div class="icon-placeholder" style="margin: 0 auto 10px;"></div>
+                <div style="font-weight: bold; margin-bottom: 5px;">Gestão de Redes</div>
+                <div class="text-small">Infraestrutura robusta</div>
+            </div>
+
+            <div class="card-mini">
+                <div class="icon-placeholder" style="margin: 0 auto 10px;"></div>
+                <div style="font-weight: bold; margin-bottom: 5px;">Cibersegurança</div>
+                <div class="text-small">Proteção avançada</div>
+            </div>
+
+            <div class="card-mini">
+                <div class="icon-placeholder" style="margin: 0 auto 10px;"></div>
+                <div style="font-weight: bold; margin-bottom: 5px;">Suporte N3</div>
+                <div class="text-small">Especialistas dedicados</div>
+            </div>
+
+            <div class="card-mini">
+                <div class="icon-placeholder" style="margin: 0 auto 10px;"></div>
+                <div style="font-weight: bold; margin-bottom: 5px;">Cloud Computing</div>
+                <div class="text-small">Escalabilidade garantida</div>
+            </div>
+
+            <div class="card-mini">
+                <div class="icon-placeholder" style="margin: 0 auto 10px;"></div>
+                <div style="font-weight: bold; margin-bottom: 5px;">Monitoramento 24/7</div>
+                <div class="text-small">Vigilância contínua</div>
+            </div>
+
+            <div class="card-mini">
+                <div class="icon-placeholder" style="margin: 0 auto 10px;"></div>
+                <div style="font-weight: bold; margin-bottom: 5px;">Banco de Dados</div>
+                <div class="text-small">Gestão otimizada</div>
+            </div>
+
+            <div class="card-mini">
+                <div class="icon-placeholder" style="margin: 0 auto 10px;"></div>
+                <div style="font-weight: bold; margin-bottom: 5px;">DevOps & SRE</div>
+                <div class="text-small">Automação eficiente</div>
+            </div>
+
+            <div class="card-mini">
+                <div class="icon-placeholder" style="margin: 0 auto 10px;"></div>
+                <div style="font-weight: bold; margin-bottom: 5px;">Backup & Recovery</div>
+                <div class="text-small">Dados sempre seguros</div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <div class="button-secondary">Ver Todos os Serviços →</div>
+        </div>
+    </div>
+
+    <!-- NEW: TESTIMONIALS SECTION -->
+    <div class="section">
+        <span class="component-tag tag-new" title="To be created at src/components/sections/Testimonials.tsx">[NEW] Testimonials</span>
+        <span class="section-label">DEPOIMENTOS - New Section</span>
+        <div class="improvement-note">
+            <h4>✨ Nova seção adicionada:</h4>
+            <ul>
+                <li>Prova social com depoimentos de clientes</li>
+                <li>Aumenta credibilidade e confiança</li>
+                <li>Casos de sucesso destacados</li>
+            </ul>
+        </div>
+
+        <div class="text-large text-center">O Que Nossos Clientes Dizem</div>
+        <p class="text-center text-small">Resultados reais de empresas que confiam em nossos serviços</p>
+
+        <div class="grid grid-3" style="margin-top: 40px;">
+            <div class="testimonial-card">
+                <div class="quote-mark">"</div>
+                <p style="margin: 15px 0; font-size: 14px;">
+                    A On Code IT transformou nossa infraestrutura. Reduzimos custos em 40% e aumentamos a disponibilidade para 99.9%.
+                </p>
+                <div style="margin-top: 20px; padding-top: 15px; border-top: 2px solid #e0e0e0;">
+                    <div style="font-weight: bold;">João Silva</div>
+                    <div class="text-small">CTO, TechCorp Brasil</div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="quote-mark">"</div>
+                <p style="margin: 15px 0; font-size: 14px;">
+                    Implementação rápida e suporte excepcional. Nossa equipe agora trabalha com ferramentas de IA que aumentaram a produtividade.
+                </p>
+                <div style="margin-top: 20px; padding-top: 15px; border-top: 2px solid #e0e0e0;">
+                    <div style="font-weight: bold;">Maria Santos</div>
+                    <div class="text-small">CEO, InnovaSoft</div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="quote-mark">"</div>
+                <p style="margin: 15px 0; font-size: 14px;">
+                    Parceria estratégica que nos permitiu focar no negócio enquanto eles cuidam de toda nossa infraestrutura de TI.
+                </p>
+                <div style="margin-top: 20px; padding-top: 15px; border-top: 2px solid #e0e0e0;">
+                    <div style="font-weight: bold;">Carlos Mendes</div>
+                    <div class="text-small">Diretor, MegaRetail</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- METHOD SECTION - ENHANCED -->
+    <div class="section">
+        <span class="section-label">MÉTODO - Enhanced Visuals</span>
+        <div class="improvement-note">
+            <h4>✨ Melhorias nesta seção:</h4>
+            <ul>
+                <li>Timeline visual mais clara com conectores</li>
+                <li>Ícones maiores e mais destacados</li>
+                <li>Descrições expandidas com benefícios</li>
+            </ul>
+        </div>
+
+        <!-- REUSABLE: Method component (enhanced) -->
+        <span class="component-tag tag-reuse" title="src/components/sections/Method.tsx">[REUSE] Method</span>
+
+        <div class="text-large text-center">O Método</div>
+        <p class="text-center text-small">Do problema à solução em 3 passos.</p>
+
+        <div class="grid grid-3" style="margin-top: 50px;">
+            <div class="text-center">
+                <div style="width: 80px; height: 80px; border: 3px solid #333; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; background: #f5f5f5;">
+                    <div class="icon-placeholder" style="margin: 0;"></div>
+                </div>
+                <div style="font-size: 14px; font-weight: bold; color: #999; margin-bottom: 10px;">PASSO 1</div>
+                <div class="text-medium">Diagnóstico Humano</div>
+                <p class="text-small" style="max-width: 280px; margin: 10px auto;">
+                    Entendemos a dor real do negócio, não apenas o ticket de suporte.
+                </p>
+                <div style="margin-top: 15px; padding: 10px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px;">
+                    <strong style="font-size: 12px;">Benefício:</strong>
+                    <span style="font-size: 12px;"> Soluções personalizadas</span>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <div style="width: 80px; height: 80px; border: 3px solid #333; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; background: #f5f5f5;">
+                    <div class="icon-placeholder" style="margin: 0;"></div>
+                </div>
+                <div style="font-size: 14px; font-weight: bold; color: #999; margin-bottom: 10px;">PASSO 2</div>
+                <div class="text-medium">Geração via IA</div>
+                <p class="text-small" style="max-width: 280px; margin: 10px auto;">
+                    Utilizamos agentes cognitivos para arquitetar soluções em velocidade recorde.
+                </p>
+                <div style="margin-top: 15px; padding: 10px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px;">
+                    <strong style="font-size: 12px;">Benefício:</strong>
+                    <span style="font-size: 12px;"> Implementação 10x mais rápida</span>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <div style="width: 80px; height: 80px; border: 3px solid #333; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; background: #f5f5f5;">
+                    <div class="icon-placeholder" style="margin: 0;"></div>
+                </div>
+                <div style="font-size: 14px; font-weight: bold; color: #999; margin-bottom: 10px;">PASSO 3</div>
+                <div class="text-medium">Implementação Técnica</div>
+                <p class="text-small" style="max-width: 280px; margin: 10px auto;">
+                    Deploy robusto, com código limpo e escalável, validado por experts.
+                </p>
+                <div style="margin-top: 15px; padding: 10px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px;">
+                    <strong style="font-size: 12px;">Benefício:</strong>
+                    <span style="font-size: 12px;"> Qualidade garantida</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEW: FAQ SECTION -->
+    <div class="section">
+        <span class="component-tag tag-new" title="To be created at src/components/sections/FAQ.tsx">[NEW] FAQ</span>
+        <span class="section-label">FAQ - New Section</span>
+        <div class="improvement-note">
+            <h4>✨ Nova seção adicionada:</h4>
+            <ul>
+                <li>Responde dúvidas comuns antes do contato</li>
+                <li>Reduz fricção no funil de conversão</li>
+                <li>Melhora SEO com conteúdo relevante</li>
+            </ul>
+        </div>
+
+        <div class="text-large text-center">Perguntas Frequentes</div>
+        <p class="text-center text-small">Respostas rápidas para suas principais dúvidas</p>
+
+        <div style="max-width: 800px; margin: 40px auto;">
+            <div class="box" style="margin-bottom: 15px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <strong>Como funciona o processo de contratação?</strong>
+                    <span style="font-size: 24px; font-weight: bold;">+</span>
+                </div>
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 2px dotted #ccc; color: #666; font-size: 14px;">
+                    Iniciamos com uma consultoria gratuita para entender suas necessidades...
+                </div>
+            </div>
+
+            <div class="box" style="margin-bottom: 15px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <strong>Qual o prazo médio de implementação?</strong>
+                    <span style="font-size: 24px; font-weight: bold;">+</span>
+                </div>
+            </div>
+
+            <div class="box" style="margin-bottom: 15px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <strong>Vocês oferecem suporte contínuo?</strong>
+                    <span style="font-size: 24px; font-weight: bold;">+</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <strong>Como garantem a segurança dos dados?</strong>
+                    <span style="font-size: 24px; font-weight: bold;">+</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION - IMPROVED -->
+    <div class="section">
+        <span class="section-label">CONTATO - Improved Form UX</span>
+        <div class="improvement-note">
+            <h4>✨ Melhorias nesta seção:</h4>
+            <ul>
+                <li>Labels visíveis para todos os campos (acessibilidade)</li>
+                <li>Campos reorganizados com melhor hierarquia</li>
+                <li>Indicadores de campos obrigatórios claros</li>
+                <li>Validação inline para melhor UX</li>
+            </ul>
+        </div>
+
+        <!-- REUSABLE: Contact component (improved) -->
+        <span class="component-tag tag-reuse" title="src/components/sections/Contact.tsx">[REUSE] Contact</span>
+
+        <div class="text-large text-center">Vamos Construir o Futuro</div>
+        <p class="text-center text-small">Entre em contato para uma consultoria técnica especializada.</p>
+
+        <div class="grid grid-2" style="margin-top: 40px; align-items: start;">
+            <!-- CONTACT INFO -->
+            <div>
+                <div class="text-medium">Canais de Atendimento</div>
+                <p class="text-small">Nossa equipe de especialistas está pronta para analisar sua infraestrutura a qualquer momento.</p>
+
+                <div class="box" style="margin-top: 20px; display: flex; align-items: center; gap: 15px;">
+                    <div class="icon-placeholder"></div>
+                    <div>
+                        <div style="font-size: 12px; color: #666;">Email</div>
+                        <div style="font-weight: bold;">contato@oncodeit.com.br</div>
+                    </div>
+                </div>
+
+                <div class="box" style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                    <div class="icon-placeholder"></div>
+                    <div>
+                        <div style="font-size: 12px; color: #666;">Sede</div>
+                        <div style="font-weight: bold;">São Paulo, SP - Brasil</div>
+                    </div>
+                </div>
+
+                <div class="box" style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                    <div class="icon-placeholder"></div>
+                    <div>
+                        <div style="font-size: 12px; color: #666;">Telefone</div>
+                        <div style="font-weight: bold;">+55 (11) 9999-9999</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORM WITH PROPER LABELS -->
+            <div class="box">
+                <form>
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px;">
+                            Nome Completo <span style="color: #d32f2f;">*</span>
+                        </label>
+                        <input type="text" class="input-field" placeholder="Seu nome completo" required />
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px;">
+                            Email Corporativo <span style="color: #d32f2f;">*</span>
+                        </label>
+                        <input type="email" class="input-field" placeholder="voce@empresa.com.br" required />
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px;">
+                            Empresa
+                        </label>
+                        <input type="text" class="input-field" placeholder="Nome da empresa" />
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px;">
+                            Telefone
+                        </label>
+                        <input type="tel" class="input-field" placeholder="+55 (11) 99999-9999" />
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px;">
+                            Mensagem <span style="color: #d32f2f;">*</span>
+                        </label>
+                        <textarea class="input-field" rows="4" placeholder="Descreva seu desafio técnico..." required></textarea>
+                        <div style="font-size: 11px; color: #666; margin-top: 5px;">Mínimo 20 caracteres</div>
+                    </div>
+
+                    <div style="margin-bottom: 20px; font-size: 12px; color: #666;">
+                        <input type="checkbox" id="privacy" style="margin-right: 8px;" required />
+                        <label for="privacy">Concordo com a política de privacidade *</label>
+                    </div>
+
+                    <!-- REUSABLE: Button component -->
+                    <span style="position: relative; display: block;">
+                        <span class="component-tag tag-reuse" title="src/components/ui/Button.tsx" style="top: -10px; right: 0;">[REUSE] Button</span>
+                        <div class="button-primary" style="width: 100%; text-align: center; margin: 0;">
+                            Enviar Mensagem →
+                        </div>
+                    </span>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="section" style="padding: 20px 30px;">
+        <!-- REUSABLE: Footer from src/components/layout/Footer.tsx -->
+        <span class="component-tag tag-reuse" title="src/components/layout/Footer.tsx">[REUSE] Footer</span>
+        <span class="section-label">FOOTER</span>
+        
+        <div class="grid grid-2" style="gap: 40px;">
+            <div>
+                <div style="font-weight: bold; font-size: 18px; margin-bottom: 15px;">[Logo] On Code_IT</div>
+                <p class="text-small">Unindo robustez da TI corporativa com velocidade da Inteligência Artificial.</p>
+                
+                <div style="margin-top: 20px;">
+                    <div style="font-weight: bold; margin-bottom: 10px;">Redes Sociais</div>
+                    <div class="flex" style="gap: 10px;">
+                        <div class="icon-placeholder" style="width: 32px; height: 32px;"></div>
+                        <div class="icon-placeholder" style="width: 32px; height: 32px;"></div>
+                        <div class="icon-placeholder" style="width: 32px; height: 32px;"></div>
+                        <div class="icon-placeholder" style="width: 32px; height: 32px;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-3">
+                <div>
+                    <div style="font-weight: bold; margin-bottom: 10px;">Serviços</div>
+                    <div class="text-small">Core IT</div>
+                    <div class="text-small">AI Solutions</div>
+                    <div class="text-small">Consultoria</div>
+                </div>
+                <div>
+                    <div style="font-weight: bold; margin-bottom: 10px;">Empresa</div>
+                    <div class="text-small">Sobre</div>
+                    <div class="text-small">Blog</div>
+                    <div class="text-small">Carreiras</div>
+                </div>
+                <div>
+                    <div style="font-weight: bold; margin-bottom: 10px;">Legal</div>
+                    <div class="text-small">Privacidade</div>
+                    <div class="text-small">Termos de Uso</div>
+                    <div class="text-small">Cookies</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 2px solid #e0e0e0; text-align: center;">
+            <div class="text-small">On Code IT © 2026. São Paulo, SP. | System: Online ●</div>
+        </div>
+    </div>
+
+    <!-- SUMMARY OF CHANGES -->
+    <div style="background: #e3f2fd; border: 3px solid #2196f3; padding: 30px; margin-top: 40px; border-radius: 8px;">
+        <h2 style="color: #1565c0; margin-bottom: 20px; font-size: 22px;">📋 Resumo das Mudanças Propostas</h2>
+        
+        <div style="background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 6px;">
+            <h3 style="color: #1565c0; margin-bottom: 15px; font-size: 18px;">🆕 Novos Componentes</h3>
+            <ul style="margin-left: 25px; line-height: 1.8; color: #333;">
+                <li><strong>StatBadge</strong> - Badges de estatísticas no Hero (500+ Projetos, 98% Satisfação, etc.)</li>
+                <li><strong>Tabs</strong> - Componente de tabs para organizar serviços</li>
+                <li><strong>Testimonials Section</strong> - Seção completa de depoimentos de clientes</li>
+                <li><strong>FAQ Section</strong> - Accordion de perguntas frequentes</li>
+            </ul>
+        </div>
+
+        <div style="background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 6px;">
+            <h3 style="color: #1565c0; margin-bottom: 15px; font-size: 18px;">♻️ Componentes Reutilizados</h3>
+            <ul style="margin-left: 25px; line-height: 1.8; color: #333;">
+                <li><strong>Header</strong> - Mantém navegação atual</li>
+                <li><strong>Hero</strong> - Com melhorias de conteúdo e layout</li>
+                <li><strong>Button</strong> - Reutilizado em CTAs</li>
+                <li><strong>Card</strong> - Reutilizado nos cards de serviços</li>
+                <li><strong>Method</strong> - Com melhorias visuais</li>
+                <li><strong>Contact</strong> - Com formulário aprimorado</li>
+                <li><strong>Footer</strong> - Expandido com mais links</li>
+            </ul>
+        </div>
+
+        <div style="background: #fff; padding: 20px; border-radius: 6px;">
+            <h3 style="color: #1565c0; margin-bottom: 15px; font-size: 18px;">✨ Principais Melhorias</h3>
+            <ul style="margin-left: 25px; line-height: 1.8; color: #333;">
+                <li><strong>Acessibilidade</strong> - Labels visíveis em todos os campos do formulário</li>
+                <li><strong>Prova Social</strong> - Estatísticas, depoimentos e indicadores de confiança</li>
+                <li><strong>Hierarquia Visual</strong> - Melhor organização e fluxo de informação</li>
+                <li><strong>SEO</strong> - Nova seção FAQ com conteúdo rico</li>
+                <li><strong>Conversão</strong> - CTAs mais destacados e múltiplos pontos de contato</li>
+                <li><strong>UX do Formulário</strong> - Validação, labels, campos obrigatórios claros</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

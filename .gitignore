@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.vercel
+.env*.local
+
+# Large files
+Video/
+compress-video.cjs
