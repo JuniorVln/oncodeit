@@ -32,7 +32,7 @@ A profissão não vai desaparecer, mas vai evoluir. O desenvolvedor do futuro (e
         author: {
             name: 'Junior Heinrichs',
             role: 'Lead Architect',
-            avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2670&auto=format&fit=crop'
+            avatar: '/Junior - Starbucks - Suica 1x1.jpg'
         },
         imageUrl: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2665&auto=format&fit=crop'
     },
@@ -64,7 +64,7 @@ Para os nossos clientes, tratamos a segurança como infraestrutura como código 
         author: {
             name: 'Junior Heinrichs',
             role: 'Head of Cloud Security',
-            avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2574&auto=format&fit=crop'
+            avatar: '/Junior - Starbucks - Suica 1x1.jpg'
         },
         imageUrl: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2668&auto=format&fit=crop'
     },
@@ -94,7 +94,7 @@ Terceirizar de forma inteligente com uma parceira moderna de engenharia de softw
         author: {
             name: 'Junior Heinrichs',
             role: 'Business Strategist',
-            avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop'
+            avatar: '/Junior - Starbucks - Suica 1x1.jpg'
         },
         imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2670&auto=format&fit=crop'
     }
