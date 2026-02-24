@@ -5,7 +5,7 @@ import { ChevronRight, Code2, CheckCircle2 } from 'lucide-react';
 
 export function Hero() {
     return (
-        <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20 pb-20">
+        <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-32 pb-40">
             {/* Video Background */}
             <div className="absolute inset-0 z-0 bg-graphite-950">
                 <div className="absolute inset-0 bg-graphite-950/70 z-10" /> {/* Overlay for text readability */}
@@ -37,8 +37,7 @@ export function Hero() {
                 >
                     <CheckCircle2 size={16} className="text-neon" />
                     <span className="text-gray-300">
-                        <strong className="text-white">10+ Anos</strong> de Experiência |
-                        <strong className="text-white"> 500+</strong> Projetos Entregues
+                        <strong className="text-white">10+ Anos</strong> de Experiência
                     </span>
                 </motion.div>
 

@@ -21,7 +21,6 @@ const values = [
 
 const stats = [
     { label: 'Anos de Experiência', value: '10+' },
-    { label: 'Projetos Entregues', value: '500+' },
     { label: 'Linhas de Código', value: '10M+' },
     { label: 'Especialistas', value: '50+' },
 ];

@@ -154,18 +154,23 @@ export default function BlogPost() {
     };
 
     return (
-        <article className="min-h-screen bg-graphite-950 font-sans selection:bg-neon/30 selection:text-neon pt-32 pb-24">
+        <article className="min-h-screen bg-graphite-950 font-sans selection:bg-neon/30 selection:text-neon pb-24">
             {/* Header Image & Title */}
-            <div className="relative h-[60vh] min-h-[400px] w-full">
-                <div className="absolute inset-0 bg-graphite-950/80 z-10" />
-                <div className="absolute inset-0 bg-gradient-to-t from-graphite-950 via-graphite-950/60 to-transparent z-10" />
+            <div className="relative h-[70vh] min-h-[500px] w-full">
+                {/* Darkening Overlays */}
+                <div className="absolute inset-0 bg-graphite-950/70 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-graphite-950 via-graphite-950/40 to-graphite-950/80 z-10" />
+
+                {/* Fade to background gradient at bottom */}
+                <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-graphite-950 to-transparent z-15" />
+
                 <img
                     src={post.imageUrl}
                     alt={post.title}
-                    className="w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-overlay"
                 />
 
-                <div className="absolute bottom-0 left-0 w-full z-20 pb-16">
+                <div className="absolute bottom-0 left-0 w-full z-20 pb-16 pt-32">
                     <div className="container mx-auto px-6 lg:px-8">
                         <div className="max-w-3xl">
                             <Link to="/blog" className="inline-flex items-center text-neon hover:text-green-400 transition-colors font-mono text-sm mb-6">
