@@ -30,7 +30,7 @@ A profissão não vai desaparecer, mas vai evoluir. O desenvolvedor do futuro (e
         category: 'Engenharia',
         readTime: '5 min',
         author: {
-            name: 'Junior',
+            name: 'Junior Heinrichs',
             role: 'Lead Architect',
             avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2670&auto=format&fit=crop'
         },
@@ -62,7 +62,7 @@ Para os nossos clientes, tratamos a segurança como infraestrutura como código 
         category: 'Infraestrutura & Cloud',
         readTime: '8 min',
         author: {
-            name: 'Carlos SecOps',
+            name: 'Junior Heinrichs',
             role: 'Head of Cloud Security',
             avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2574&auto=format&fit=crop'
         },
@@ -92,7 +92,7 @@ Terceirizar de forma inteligente com uma parceira moderna de engenharia de softw
         category: 'Negócios',
         readTime: '6 min',
         author: {
-            name: 'Marina CEO',
+            name: 'Junior Heinrichs',
             role: 'Business Strategist',
             avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop'
         },
@@ -154,9 +154,9 @@ export default function BlogPost() {
     };
 
     return (
-        <article className="min-h-screen bg-graphite-950 font-sans selection:bg-neon/30 selection:text-neon pt-20 pb-24">
+        <article className="min-h-screen bg-graphite-950 font-sans selection:bg-neon/30 selection:text-neon pt-32 pb-24">
             {/* Header Image & Title */}
-            <div className="relative h-[60vh] min-h-[400px] w-full mt-4">
+            <div className="relative h-[60vh] min-h-[400px] w-full">
                 <div className="absolute inset-0 bg-graphite-950/80 z-10" />
                 <div className="absolute inset-0 bg-gradient-to-t from-graphite-950 via-graphite-950/60 to-transparent z-10" />
                 <img
