@@ -5,6 +5,7 @@ import Services from './pages/Services';
 import TerceirizacaoTI from './pages/ServicesDetail/TerceirizacaoTI';
 import Infraestrutura from './pages/ServicesDetail/Infraestrutura';
 import Desenvolvimento from './pages/ServicesDetail/Desenvolvimento';
+import InteligenciaArtificial from './pages/ServicesDetail/InteligenciaArtificial';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
             {
                 path: 'servicos/desenvolvimento',
                 element: <Desenvolvimento />,
+            },
+            {
+                path: 'servicos/ia',
+                element: <InteligenciaArtificial />,
             },
             {
                 path: 'sobre',

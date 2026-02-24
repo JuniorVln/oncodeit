@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Server, Users2, Code2, ArrowRight, Terminal } from 'lucide-react';
+import { Server, Users2, Code2, ArrowRight, Terminal, Bot } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const services = [
@@ -8,8 +8,16 @@ const services = [
         title: 'Desenvolvimento e Fábrica de Software',
         icon: Code2,
         description: 'Sistemas robustos construídos sob medida. Integrando tecnologias modernas e inteligência artificial para criar vantagens competitivas exclusivas.',
-        features: ['Sistemas Web e Mobile', 'APIs e Integrações', 'Automação com IA'],
+        features: ['Sistemas Web e Mobile', 'APIs e Integrações', 'Arquitetura Edge'],
         link: '/servicos/desenvolvimento'
+    },
+    {
+        id: 'ia',
+        title: 'Inteligência Artificial & Automação',
+        icon: Bot,
+        description: 'Potencialize sua empresa integrando inteligência artificial. Criamos agentes autônomos e automatizações cognitivas que trabalham 24/7.',
+        features: ['Agentes Autônomos', 'Automação de Processos', 'LLM Integrations'],
+        link: '/servicos/ia'
     },
     {
         id: 'infraestrutura',
