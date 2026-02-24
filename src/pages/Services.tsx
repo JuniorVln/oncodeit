@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Server, Users2, Code2, ArrowRight, Terminal, Bot } from 'lucide-react';
+import { Server, Users2, Code2, ArrowRight, Terminal, Bot, Sparkles, Cpu } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const services = [
@@ -34,6 +34,22 @@ const services = [
         description: 'Especialize sua operação com squads dedicadas de alta performance. Reduza custos, diminua riscos e aumente a velocidade de entrega.',
         features: ['Alocação de Especialistas', 'Gestão Ágil', 'Flexibilidade de Escala'],
         link: '/servicos/terceirizacao-ti'
+    },
+    {
+        id: 'assistentes-chatbots',
+        title: 'Assistentes & Chatbots IA',
+        icon: Sparkles,
+        description: 'Transforme sua base de conhecimento em uma inteligência corporativa ativa. Suporte autônomo com agentes inteligentes focados em vendas e retenção.',
+        features: ['Arquitetura RAG', 'Integração LLM', 'Suporte N1 Automático'],
+        link: '/servicos/ia'
+    },
+    {
+        id: 'integracao-agentes',
+        title: 'Integração de Sistemas & Agents',
+        icon: Cpu,
+        description: 'Conecte ferramentas tradicionais (ERP, CRM) com agentes cognitivos (MCPs). Decisões autônomas diretamente conectadas com a fonte da verdade da corporação.',
+        features: ['Hub de Automação B2B', 'Model Context Protocol', 'Multi-plataforma'],
+        link: '/servicos/ia'
     }
 ];
 
